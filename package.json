@@ -1,5 +1,5 @@
 {
-  "name": "animatex",
+  "name": "lsl-animatex",
   "version": "0.1.0",
   "description": "A lightweight framework for custom animations",
   "license": "MIT",
@@ -15,16 +15,14 @@
   "bugs": {
     "url": "http://github.com/levilindsey/animatex/issues"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "babelify": "^8.0.0",
     "browserify": "^16.2.2",
     "connect-livereload": "^0.6.0",
-    "dat.gui": "^0.7.2",
     "del": "^3.0.0",
-    "gl-matrix": "^2.7.0",
     "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
@@ -56,6 +54,10 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "gulp": "^3.9.1"
   },
   "engines": {
     "node": ">=8.11.3"
