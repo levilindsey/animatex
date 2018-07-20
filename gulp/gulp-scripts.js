@@ -4,7 +4,7 @@ import browserify from 'browserify';
 import source from 'vinyl-source-stream';
 import buffer from 'vinyl-buffer';
 const plugins = require('gulp-load-plugins')({ lazy: false });
-import config from './gulp-config';
+import config from './config';
 
 gulp.task('scripts', () => {
   browserify({ entries: config.mainScriptSrc, extensions: ['.js'], debug: true })

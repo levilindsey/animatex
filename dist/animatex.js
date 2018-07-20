@@ -5,73 +5,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _animationJob = require('./src/animation-job');
-
-Object.keys(_animationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animationJob[key];
-    }
-  });
-});
-
-var _animator = require('./src/animator');
-
-Object.keys(_animator).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _animator[key];
-    }
-  });
-});
-
-var _frameLatencyProfiler = require('./src/frame-latency-profiler');
-
-Object.keys(_frameLatencyProfiler).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _frameLatencyProfiler[key];
-    }
-  });
-});
-
-var _persistentAnimationJob = require('./src/persistent-animation-job');
-
-Object.keys(_persistentAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _persistentAnimationJob[key];
-    }
-  });
-});
-
-var _transientAnimationJob = require('./src/transient-animation-job');
-
-Object.keys(_transientAnimationJob).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function get() {
-      return _transientAnimationJob[key];
-    }
-  });
-});
-
-},{"./src/animation-job":2,"./src/animator":3,"./src/frame-latency-profiler":4,"./src/persistent-animation-job":5,"./src/transient-animation-job":6}],2:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {
@@ -190,7 +123,7 @@ var AnimationJob = function () {
 
 exports.AnimationJob = AnimationJob;
 
-},{}],3:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -537,7 +470,7 @@ exports.animator = animator;
  * millisecond.
  */
 
-},{"./frame-latency-profiler":4,"./persistent-animation-job":5,"./transient-animation-job":6}],4:[function(require,module,exports){
+},{"./frame-latency-profiler":3,"./persistent-animation-job":5,"./transient-animation-job":6}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -646,7 +579,74 @@ var FrameLatencyProfiler = function () {
 
 exports.FrameLatencyProfiler = FrameLatencyProfiler;
 
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _animationJob = require('./animation-job');
+
+Object.keys(_animationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animationJob[key];
+    }
+  });
+});
+
+var _animator = require('./animator');
+
+Object.keys(_animator).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _animator[key];
+    }
+  });
+});
+
+var _frameLatencyProfiler = require('./frame-latency-profiler');
+
+Object.keys(_frameLatencyProfiler).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _frameLatencyProfiler[key];
+    }
+  });
+});
+
+var _persistentAnimationJob = require('./persistent-animation-job');
+
+Object.keys(_persistentAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _persistentAnimationJob[key];
+    }
+  });
+});
+
+var _transientAnimationJob = require('./transient-animation-job');
+
+Object.keys(_transientAnimationJob).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _transientAnimationJob[key];
+    }
+  });
+});
+
+},{"./animation-job":1,"./animator":2,"./frame-latency-profiler":3,"./persistent-animation-job":5,"./transient-animation-job":6}],5:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -726,7 +726,7 @@ var PersistentAnimationJob = function (_AnimationJob) {
 
 exports.PersistentAnimationJob = PersistentAnimationJob;
 
-},{"./animation-job":2}],6:[function(require,module,exports){
+},{"./animation-job":1}],6:[function(require,module,exports){
 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -814,7 +814,7 @@ var TransientAnimationJob = function (_AnimationJob) {
 
 exports.TransientAnimationJob = TransientAnimationJob;
 
-},{"./animation-job":2,"./util":7}],7:[function(require,module,exports){
+},{"./animation-job":1,"./util":7}],7:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -873,6 +873,6 @@ var _util = {
 
 exports._util = _util;
 
-},{}]},{},[1])
+},{}]},{},[4])
 
 //# sourceMappingURL=animatex.js.map

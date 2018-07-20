@@ -15,7 +15,7 @@ config.scriptDistFileName = `${appName}.js`;
 
 config.distGlob = `${config.distPath}/**`;
 
-config.mainScriptSrc = `index.js`;
+config.mainScriptSrc = `${config.publicPath}/index.js`;
 config.scriptsSrc = [
   config.mainScriptSrc,
   `${config.publicPath}/**/*.js`,
