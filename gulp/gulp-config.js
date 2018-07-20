@@ -1,38 +1,32 @@
 const appName = 'animatex';
 
-const lslGulpConfig = {};
+const config = {};
 
-lslGulpConfig.tasks = [
-  'gulp-clean',
-  'gulp-default',
-  'gulp-scripts'
+config.srcPath = 'src';
+config.distPath = 'dist';
+config.nodeModulesPath = 'node_modules';
+
+config.publicPath = config.srcPath;
+
+config.scriptsDist = `${config.distPath}`;
+config.sourceMapsDist = '.';
+
+config.scriptDistFileName = `${appName}.js`;
+
+config.distGlob = `${config.distPath}/**`;
+
+config.mainScriptSrc = `index.js`;
+config.scriptsSrc = [
+  config.mainScriptSrc,
+  `${config.publicPath}/**/*.js`,
 ];
 
-lslGulpConfig.srcPath = 'src';
-lslGulpConfig.distPath = 'dist';
-lslGulpConfig.nodeModulesPath = 'node_modules';
-
-lslGulpConfig.publicPath = lslGulpConfig.srcPath;
-
-lslGulpConfig.scriptsDist = `${lslGulpConfig.distPath}`;
-lslGulpConfig.sourceMapsDist = '.';
-
-lslGulpConfig.scriptDistFileName = `${appName}.js`;
-
-lslGulpConfig.distGlob = `${lslGulpConfig.distPath}/**`;
-
-lslGulpConfig.mainScriptSrc = `index.js`;
-lslGulpConfig.scriptsSrc = [
-  lslGulpConfig.mainScriptSrc,
-  `${lslGulpConfig.publicPath}/**/*.js`,
-];
-
-lslGulpConfig.buildTasks = [
+config.buildTasks = [
   'scripts',
 ];
 
 //config.host = '0.0.0.0';
-lslGulpConfig.host = 'localhost';
-lslGulpConfig.port = 8080;
+config.host = 'localhost';
+config.port = 8080;
 
-export default lslGulpConfig;
+export default config;
