@@ -2,7 +2,7 @@
 
 #### A lightweight framework for custom animations.
 
-_See this in use at [levi.codes/dynamics-example][demo]!_
+_See this in use at [levi.codes/dynamics][demo]!_
 
 ## Notable Features
 
@@ -31,17 +31,19 @@ The technologies used in this application include:
 - [Babel][babel]
 - [Browserify][browserify]
 - [SASS][sass]
-- [lsl-gulp-tasks][lsl-gulp-tasks]
 - Numerous other packages that are available via [NPM][npm] (these are listed within the
   [`package.json`](./package.json) file)
+
+## Developing / Running the Code
+
+See [Getting Set Up](./docs/getting-set-up) or [Understanding the
+Code](./docs/understanding-the-code) for more info.
 
 ## License
 
 MIT
 
 [demo]: http://levi.codes/space-debris
-
-[lsl-gulp-tasks]: https://github.com/levilindsey/lsl-gulp-tasks
 
 [es2015]: http://www.ecma-international.org/ecma-262/6.0/
 [webgl]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
