@@ -2,7 +2,7 @@
 
 #### A lightweight framework for custom animations.
 
-_See this in use at [levi.codes/dynamics][demo]!_
+_See this in use at [levi.dev/dynamics][demo]!_
 
 ## Notable Features
 
