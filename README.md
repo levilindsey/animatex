@@ -43,7 +43,7 @@ Code](./docs/understanding-the-code) for more info.
 
 MIT
 
-[demo]: http://levi.codes/space-debris
+[demo]: http://levi.dev/space-debris
 
 [es2015]: http://www.ecma-international.org/ecma-262/6.0/
 [webgl]: https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API
